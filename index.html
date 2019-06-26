@@ -1,0 +1,114 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>石塘小箬村</title>
+  <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="container">
+    <ul id="nav">
+      <li>首页</li>
+      <li>资讯</li>
+      <li>游记</li>
+      <li>路线</li>
+      <li>酒店</li>
+      <li>景点</li>
+      <li>团购</li>
+      <li>攻略</li>
+      <li><a href="#">登录</a></li>
+    </ul>
+    <div id="banner">
+      <ul id="br">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </div>
+    <div class="contnet clearfix">
+      <div class="left">
+        <div class="_title">旅游看点</div>
+        <div id="lvyouzixun_biaoti">温岭石塘</div>
+        <div id="lvyouzixun_text">
+          <p>温岭七彩小箬村一日游</p>
+          <p>金沙滩踏浪一日游</p>
+          <p>石塘滨海绿道（网红景观台）一日游</p>
+          <div class="lvyouzixun_photo photo_1"><span>七彩小箬村马卡龙房屋</span></div>
+          <div class="lvyouzixun_photo photo_2"><span>金沙踏浪夕阳石塘</span></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="_title">景点地图</div>
+        <div id="map"></div>
+      </div>
+    </div>
+    <div class="contnet clearfix">
+      <div class="left">
+        <div class="_title">线路/景点</div>
+        <div id="jingdiantu"></div>
+      </div>
+      <div class="right">
+        <div id="content_nav">
+          <li>小箬村</li>
+          <li>千年曙光园</li>
+          <li>栖衡石舍</li>
+          <li>金沙滩</li>
+          <li>蝶出三舍</li>
+          <li>珍珠滩</li>
+          <li>星罗海野</li>
+        </div>
+        <ul id="photo4">
+          <li><span>乡村古厝</span></li>
+          <li><span>香脆鱼干</span></li>
+          <li><span>多彩陶艺</span></li>
+          <li><span>缤纷尖椒</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="item">
+      <div class="leftTitle">文化/民宿</div>
+      <div class="rightTitle">多彩海岛 山间仰望 石塘初貌 更多</div>
+      <ul class="photo">
+        <li><span>彩色、渔村、ins风、石屋、海滩</span></li>
+        <li><span>彩色、渔村、ins风、石屋、海滩</span></li>
+        <li><span>彩色、渔村、ins风、石屋、海滩</span></li>
+        <li><span>彩色、渔村、ins风、石屋、海滩</span></li>
+      </ul>
+    </div>
+    <div id="heng"></div>
+    <div id="footer">
+      <p>关于我们 联系我们 保护隐私</p>
+      <p>技术支持：m麻家姐妹</p>
+      <p>友情链接：</p>
+      <p>泉州市旅游局</p>
+    </div>
+  </div>
+</body>
+<script>
+  var dt = 0;
+  var i = 0;
+  var timerId = setInterval(function () {
+    dt++;
+    if (dt % (60 * 3) == 0) {
+      i++;
+      if (i == 3) {
+        i = 0
+      }
+      banner.style.backgroundImage = 'url(./images/banner_' + i + '.jpg)';
+    }
+  }, 20);
+
+  var btn = br.getElementsByTagName('li');
+  for (let key in btn) {
+    if (btn.hasOwnProperty(key)) {
+      btn[key].onclick = function () {
+        banner.style.backgroundImage = 'url(./images/banner_' + key + '.jpg)';
+      }
+    }
+  }
+</script>
+
+</html>
